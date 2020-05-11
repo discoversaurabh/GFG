@@ -16,6 +16,12 @@ int main()
     s.erase(6, 1);
     std::cout << s << '\n';
     
+    s.replace(5, 1, 'i');  //ERROR HERE AS replace() does not accept "char" as 3rd argument, 3rd arg must be a string
+    std::cout << s << '\n';
+    
+    s.replace(5, 1, "i");  
+    std::cout << s << '\n'; // will work fine and print [This is an example]
+ 
     return 0;
 }
 
@@ -24,3 +30,4 @@ int main()
 // This wis an example
 // This was an example
 // This ws an example
+// This is an example
